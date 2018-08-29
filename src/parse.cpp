@@ -3,12 +3,44 @@
  */
 
 #include "parse.h"
+#include <cstdbool>
 
 std::vector<term_t>
 parse(
     char *s)
 {
-	/* TODO */
+	/* TO DO:
+		> Need to create a function that takes in a formula the user
+		> inputs. Set it as an array, For loops through it and checks
+		> for negative or plus sign. 
+	
+	 */
+	bool sign_flg;
+
+	sign_flag = true;
+
+	for (char *c=s; *c; ++c)
+	    {
+		switch (*c) {
+			case ' ':
+			case '\t':
+			case '\n':
+				break;;
+		
+			case '-':
+				if (sign_flg) {
+					/* negate the sign of the following
+					 * number */
+				} else {
+					/* it is an operator, so end the term
+					 * here */
+					sign_flag = false;
+				}
+				break;;
+		}
+
+	    }
+
 }
 
 /* vim: set ts=8 sw=8 noexpandtab cindent tw=79:
