@@ -10,12 +10,26 @@
  */
 
 #include <cstdlib>
+#include <getopt.h>
+
+#include "parse.h"
+
+const char *const opts = ":e:";
+
+const struct option longopts[] = {
+	{ "equation",	required_argument,	NULL,	'e' },
+	{ "help",	no_argument,	NULL,	'h' },
+	{ "version",	no_argument,	NULL,	'V' },
+	{ NULL, 0, NULL, 0}
+};
 
 int
 main(
     int argc,
     char *const argv[])
 {
+	
+
 	return EXIT_SUCCESS;
 }
 
